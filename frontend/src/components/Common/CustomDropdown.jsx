@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { IoMdSettings } from "react-icons/io"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 
 import { setHeader, setTheme } from "../../slices/themeSlice"
 
@@ -8,7 +8,7 @@ const CustomDropdown = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const dispatch = useDispatch()
-  const currentTheme = useSelector((state) => state.theme.theme)
+
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen)

@@ -1,8 +1,6 @@
 import { useEffect } from "react"
 import "./App.css"
-import CustomDropdown2 from "./components/Common/CustomDropdown2";
 import CustomDropdown from "./components/Common/CustomDropdown";
-import { IoMdSettings } from "react-icons/io";
 // Redux
 import { useDispatch, useSelector } from "react-redux"
 // React Router

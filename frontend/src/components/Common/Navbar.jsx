@@ -8,9 +8,8 @@ import { NavbarLinks } from "../../data/navbar-links"
 import { apiConnector } from "../../services/apiConnector"
 import { categories } from "../../services/apis"
 import { ACCOUNT_TYPE } from "../../utils/constants"
-import CustomDropdown from "../Common/CustomDropdown"
 import ProfileDropdown from "../core/Auth/ProfileDropdown"
-import { hover } from "@testing-library/user-event/dist/hover"
+
 
 function Navbar() {
   const { token } = useSelector((state) => state.auth)

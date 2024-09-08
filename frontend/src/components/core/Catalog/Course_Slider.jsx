@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react"
+/* eslint-disable react/jsx-pascal-case */
+import React from "react"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
 

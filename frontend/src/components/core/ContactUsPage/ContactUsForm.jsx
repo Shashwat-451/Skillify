@@ -23,7 +23,7 @@ const ContactUsForm = () => {
         contactusEndpoint.CONTACT_US_API,
         data
       )
-      // console.log("Email Res - ", res)
+      console.log("Email Res - ", res)
       setLoading(false)
     } catch (error) {
       console.log("ERROR MESSAGE - ", error.message)
@@ -42,7 +42,7 @@ const ContactUsForm = () => {
       })
     }
   }, [reset, isSubmitSuccessful])
-
+ 
   return (
     <form
       className="flex flex-col gap-7"

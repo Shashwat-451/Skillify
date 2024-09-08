@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import axios from "axios"
 
 import CourseCard from "../components/core/Catalog/CourseCard.jsx"
-import { color } from "chart.js/helpers"
+
 
 
 export default function AllCourses() {

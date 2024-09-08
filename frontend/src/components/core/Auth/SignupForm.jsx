@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setSignupData } from "../../../slices/authSlice";
+// import { setSignupData } from "../../../slices/authSlice";
 import { ACCOUNT_TYPE } from "../../../utils/constants";
 import Tab from "../../Common/Tab";
 import { signUp } from "../../../services/operations/authAPI";
@@ -14,7 +14,7 @@ function SignupForm() {
 
   // student or instructor
   const [accountType, setAccountType] = useState(ACCOUNT_TYPE.STUDENT);
-  const { signupData } = useSelector((state) => state.auth);
+  // const { signupData } = useSelector((state) => state.auth);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",

@@ -39,7 +39,7 @@ export default function AllCourses() {
   return (
     <>
     <div className="mt-5 ml-2">
-    <select className="theme text-white border-none rounded-[18px] p-1 w-[170px]" onChange={handleChange}>
+    <select style={{marginLeft:"120px",marginTop:"50px",border:"2px solid black"}} className="border-none rounded-[18px] p-1 w-[170px] " onChange={handleChange}>
             <option  value={"All"}>Filter</option>
             <option  value={"Web Development"}>Web Development</option>
             <option value={"Blockchain"}>Blockchain</option>
@@ -49,8 +49,8 @@ export default function AllCourses() {
         </select>
 
         <input
-         style={{border:"none",outline:"none",color:"white"}}
-        className=" w-[170px] ml-3 theme place text-white rounded-[18px] p-1" name="search" value={search} onChange={handleSearch} placeholder="Search Course"/>
+         style={{border:"2px solid black"}}
+        className=" w-[170px] ml-3  rounded-[18px] p-1" name="search" value={search} onChange={handleSearch} placeholder="Search Course"/>
 
     </div>
      

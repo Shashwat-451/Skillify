@@ -1,11 +1,11 @@
 import { useEffect } from "react"
 import "./App.css"
-import CustomDropdown from "./components/Common/CustomDropdown";
+
 // Redux
 import { useDispatch, useSelector } from "react-redux"
 // React Router
 import { Route, Routes, useNavigate } from "react-router-dom"
-
+import Footer from "../src/components/Common/Footer"
 // Components
 import Navbar from "./components/Common/Navbar"
 import OpenRoute from "./components/core/Auth/OpenRoute"
@@ -55,7 +55,7 @@ function App() {
       {/* <CustomDropdown2 /> */}
 
       <Navbar />
-       <CustomDropdown />
+     
       {/* <CustomDropdown2 /> */}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -165,7 +165,9 @@ function App() {
 
         {/* 404 Page */}
         <Route path="*" element={<Error />} />
+       
       </Routes>
+      <Footer/>
     </div>
   )
 }

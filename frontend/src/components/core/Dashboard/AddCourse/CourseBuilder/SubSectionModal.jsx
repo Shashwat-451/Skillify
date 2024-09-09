@@ -125,10 +125,10 @@ export default function SubSectionModal({
   }
 
   return (
-    <div className="fixed inset-0 z-[1000] !mt-0 grid h-screen w-screen place-items-center overflow-auto  -white  -opacity-10 backdrop-blur-sm">
-      <div className="my-10 w-11/12 max-w-[700px] rounded-lg border border-richblack-400  ">
+    <div className=" fixed inset-0 z-[1000] !mt-0 grid h-screen w-screen place-items-center overflow-auto  -white  -opacity-10 backdrop-blur-sm">
+      <div className=" theme text-white my-10 w-11/12 max-w-[700px] rounded-lg border border-richblack-400  ">
         {/* Modal Header */}
-        <div className="flex items-center justify-between rounded-t-lg    p-5">
+        <div className=" flex items-center justify-between rounded-t-lg    p-5">
           <p className="text-xl font-semibold  -5">
             {view && "Viewing"} {add && "Adding"} {edit && "Editing"} Lecture
           </p>
@@ -153,19 +153,19 @@ export default function SubSectionModal({
             editData={edit ? modalData.videoUrl : null}
           />
           {/* Lecture Title */}
-          <div className="flex flex-col space-y-2">
+          <div className=" flex flex-col space-y-2">
             <label className="text-sm  -5" htmlFor="lectureTitle">
-              Lecture Title {!view && <sup className="text-pink-200">*</sup>}
+              Lecture Title {!view && <sup className="text-white">*</sup>}
             </label>
             <input
               disabled={view || loading}
               id="lectureTitle"
               placeholder="Enter Lecture Title"
               {...register("lectureTitle", { required: true })}
-              className="form-style w-full"
+              className="form-style w-full p-2 border-rounded rounded-[18px] text-black "
             />
             {errors.lectureTitle && (
-              <span className="ml-2 text-xs tracking-wide text-pink-200">
+              <span className="ml-2 text-xs tracking-wide text-white">
                 Lecture title is required
               </span>
             )}
@@ -174,17 +174,17 @@ export default function SubSectionModal({
           <div className="flex flex-col space-y-2">
             <label className="text-sm  -5" htmlFor="lectureDesc">
               Lecture Description{" "}
-              {!view && <sup className="text-pink-200">*</sup>}
+              {!view && <sup className="">*</sup>}
             </label>
             <textarea
               disabled={view || loading}
               id="lectureDesc"
               placeholder="Enter Lecture Description"
               {...register("lectureDesc", { required: true })}
-              className="form-style resize-x-none min-h-[130px] w-full"
+              className="form-style w-full p-2 border-rounded rounded-[18px] resize-x-none min-h-[130px] text-black "
             />
             {errors.lectureDesc && (
-              <span className="ml-2 text-xs tracking-wide text-pink-200">
+              <span className="ml-2 text-xs tracking-wide text-white">
                 Lecture Description is required
               </span>
             )}

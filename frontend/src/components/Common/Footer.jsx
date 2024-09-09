@@ -3,7 +3,7 @@ import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
 
 // Images
-import Logo from "../../assets/Logo/Logo-Full-Light.png";
+
 
 // Icons
 import { FaFacebook, FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa";
@@ -24,13 +24,13 @@ const Community = ["Forums", "Chapters", "Events"];
 
 const Footer = () => {
   return (
-    <div className=" ">
+    <div className=" theme text-white">
       <div className="flex lg:flex-row gap-8 items-center justify-between w-11/12 max-w-maxContent  -400 leading-6 mx-auto relative py-14">
         <div className="border-b w-[100%] flex flex-col lg:flex-row pb-5 border-richblack-700">
           {/* Section 1 */}
           <div className="lg:w-[50%] flex flex-wrap flex-row justify-between lg:border-r lg:border-richblack-700 pl-3 lg:pr-5 gap-3">
             <div className="w-[30%] flex flex-col gap-3 lg:w-[30%] mb-7 lg:pl-0">
-              <img src={Logo} alt="" className="object-contain" />
+              <h1 style={{fontSize:"30px",fontWeight:"bold",marginBottom:"30px"}}>Skillify</h1>
               <h1 className="  font-semibold text-[16px]">
                 Company
               </h1>
@@ -150,7 +150,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-between w-11/12 max-w-maxContent  -400 mx-auto  pb-14 text-sm">
+      <div className=" flex flex-row items-center justify-between w-11/12 max-w-maxContent  -400 mx-auto  pb-14 text-sm">
         {/* Section 1 */}
         <div className="flex justify-between lg:items-start items-center flex-col lg:flex-row gap-3 w-full">
           <div className="flex flex-row">
@@ -172,7 +172,7 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Made with ❤️ © 2024 Skillify</div>
+          <div className="text-center ">Made with ❤️ © 2024 Skillify</div>
         </div>
       </div>
     </div>

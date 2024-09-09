@@ -40,7 +40,7 @@ export default function Instructor() {
 
   return (
     <div>
-      <div className="space-y-2">
+      <div className=" space-y-2">
         <h1 className="text-2xl font-bold  -5">
           Hi {user?.firstName} 👋
         </h1>
@@ -52,7 +52,7 @@ export default function Instructor() {
         <div className="spinner"></div>
       ) : courses.length > 0 ? (
         <div>
-          <div className="my-4 flex h-[450px] space-x-4">
+          <div className=" my-4 flex h-[450px] space-x-4">
             {/* Render chart / graph */}
             {totalAmount > 0 || totalStudents > 0 ? (
               <InstructorChart courses={instructorData} />
@@ -65,7 +65,7 @@ export default function Instructor() {
               </div>
             )}
             {/* Total Statistics */}
-            <div className="flex min-w-[250px] flex-col rounded-md   p-6">
+            <div className="theme text-white flex min-w-[250px] flex-col rounded-md   p-6">
               <p className="text-lg font-bold  -5">Statistics</p>
               <div className="mt-4 space-y-4">
                 <div>

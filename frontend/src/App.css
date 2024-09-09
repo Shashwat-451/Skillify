@@ -343,18 +343,32 @@ body {
 .dropbtn {
 
   color: white;
-  padding: 12px;
+  padding: 8px;
   font-size: 16px;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* animation: rotate 2s linear infinite; */
   }
-  .place::placeholder {
+  @keyframes rotate {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);
+    }
+    }
+  /* .place::placeholder {
     color: white;
-  }
-  .dropbtn2 {
+  } */
+  .rot {
+    font-size: 25px; /* Adjust the size as needed */
+    /* animation: rotate 5s linear infinite; */
+    
+    }
+  /* .dropbtn2 {
 
     color: white;
     padding: 6px;
@@ -365,19 +379,25 @@ body {
     align-items: center;
     justify-content: center;
     }
-  
+   */
   .dropdown {
   position: relative;
   display: inline-block;
+  border-radius: 50%;
+  width: 40px;
 }
-  
+  .bg-gray{
+    background-color: rgb(214, 204, 204);
+  }
   .dropdown-content {
   display: none;
   position: absolute;
-  
+  right: 20px;
   min-width: 110px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  border: 5px solid;
+  border-color: var(--button-bg);
   }
   
   .dropdown-content div {
@@ -397,11 +417,37 @@ body {
   display: block;
   }
 
-
+  
 
   .hov p:hover {
     background-color: white;
     color: black;
     border-radius: 10px;
   
+    }
+   
+ 
+    .allCoursesCards{
+     
+      position: relative;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+      transition: box-shadow 0.3s ease;
+    
+    }
+  
+    .allCoursesCard:hover {
+    
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 2.5);
+  }
+  
+    .lowercontent{
+      position: absolute;
+      bottom: 0px; /* Position text from the bottom */
+            left: 0px; /* Position text from the left */
+            color: white; /* Text color */
+            font-size: 24px; /* Font size */
+            font-weight: bold; /* Font weight */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 10px; /* Padding around text */
+            border-radius: 20px; /* Rounded corners */
     }

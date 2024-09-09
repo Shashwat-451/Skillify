@@ -81,27 +81,33 @@ function Catalog() {
       {/* Section 1 */}
       <div className=" mx-auto box-content w-full max-w-maxContentTab px-4 py-12 lg:max-w-maxContent">
         
-        <div style={{borderBottom:"2px solid lightgray"}} className=" mb-2 flex">
-          <p
-            className={`px-4 py-2 ${
+        <div style={{width:"240px",padding:"0px 5px 0px 5px"}} className=" mb-2 flex">
+          <div style={{padding:"10px 0px 10px 0px"}}>
+          <p 
+            className={`px-4 py-2 p-5 rounded-sm ${
               active === 1
-                ? "font-bold theme-text"
-                : "font-bold "
+                ? "font-bold theme text-white"
+                : "font-bold bg-white text-black "
             } cursor-pointer`}
             onClick={() => setActive(1)}
           >
             Most Populer
           </p>
+          </div>
+          <div style={{padding:"10px 0px 10px 0px"}}>
           <p
-            className={`px-4 py-2 ${
+            className={`px-4 py-2 p-5 rounded-sm ${
               active === 2
-                ? "font-bold theme-text"
-                : " font-bold"
+                ? "font-bold theme text-white"
+                : " font-bold bg-white text-black"
             } cursor-pointer`}
             onClick={() => setActive(2)}
           >
             New
           </p>
+
+          </div>
+         
         </div>
         <div>
         

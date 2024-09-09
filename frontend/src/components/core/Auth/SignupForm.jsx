@@ -175,7 +175,7 @@ function SignupForm() {
               value={formData.confirmPassword}
               onChange={handleOnChange}
               placeholder="Confirm Password"
-              className="form-style w-full !pr-10 p-2 rounded-[18px]"
+              className="form-style w-full !pr-10 p-2 rounded-[18px] text-black"
             />
             <span
               onClick={() => setShowConfirmPassword((prev) => !prev)}

@@ -14,7 +14,7 @@ const CourseCard = ({cardData, currentCard, setCurrentCard}) => {
       }   -25 h-[300px] box-border cursor-pointer`}
       onClick={() => setCurrentCard(cardData?.heading)}
     >
-      <div className="border-b-[2px] border-richblack-400 border-dashed h-[80%] p-6 flex flex-col gap-3">
+      <div className="border-b-[2px] border-white-400 border-dashed h-[80%] p-6 flex flex-col gap-3">
         <div
           className={` ${
             currentCard === cardData?.heading && " -800"

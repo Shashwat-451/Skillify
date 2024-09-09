@@ -29,7 +29,7 @@ export default function Sidebar() {
   return (
     <>
       <div className="flex h-[calc(100vh-3.5rem)] min-w-[220px] flex-col border-r-[1px] border-r-richblack-700   py-10">
-        <div className="flex flex-col">
+        <div className=" flex flex-col">
           {sidebarLinks.map((link) => {
             if (link.type && user?.accountType !== link.type) return null
             return (
@@ -37,7 +37,7 @@ export default function Sidebar() {
             )
           })}
         </div>
-        <div className="mx-auto mt-6 mb-6 h-[1px] w-10/12   " />
+        <div className=" mx-auto mt-6 mb-6 h-[1px] w-10/12   " />
         <div className="flex flex-col">
           <SidebarLink
             link={{ name: "Settings", path: "/dashboard/settings" }}
@@ -54,7 +54,7 @@ export default function Sidebar() {
                 btn2Handler: () => setConfirmationModal(null),
               })
             }
-            className="px-8 py-2 text-sm font-medium  "
+            className=" px-8 py-2 text-sm font-medium  "
           >
             <div className="flex items-center gap-x-2">
               <VscSignOut className="text-lg" />

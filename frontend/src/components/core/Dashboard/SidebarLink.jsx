@@ -19,7 +19,7 @@ export default function SidebarLink({ link, iconName }) {
       onClick={() => dispatch(resetCourseState())}
       className={`relative px-8 py-2 text-sm font-medium ${
         matchRoute(link.path)
-          ? " -yellow-800 text-yellow-50"
+          ? " -yellow-800 theme text-white"
           : " -opacity-0  "
       } transition-all duration-200`}
     >

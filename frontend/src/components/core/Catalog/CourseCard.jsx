@@ -20,11 +20,12 @@ function Course_Card({ course, Height }) {
   return (
     <>
       <Link to={`/courses/${course._id}`}>
-        <div className="bg-richblack-700 text-white">
+        <div className="bg-richblack-700 text-white rounded-[25px] allCoursesCards">
           <div className="rounded-lg">
             <img style={{height:"300px",width:"800px"}}
               src={course?.thumbnail}
               alt="course thumbnail"
+              className="rounded-[25px]"
             />
           </div>
           <div className="flex flex-col gap-2 px-2 py-3">

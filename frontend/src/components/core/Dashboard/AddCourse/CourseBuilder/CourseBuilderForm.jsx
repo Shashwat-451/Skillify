@@ -100,7 +100,7 @@ export default function CourseBuilderForm() {
   }
 
   return (
-    <div className="space-y-8 rounded-md border-[1px] border-richblack-700   p-6">
+    <div className="space-y-8 rounded-md border-[1px] border-richblack-700 theme text-white  p-6">
       <p className="text-2xl font-semibold  -5">Course Builder</p>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div className="flex flex-col space-y-2">
@@ -112,10 +112,10 @@ export default function CourseBuilderForm() {
             disabled={loading}
             placeholder="Add a section to build your course"
             {...register("sectionName", { required: true })}
-            className="form-style w-full"
+            className="form-style w-full p-2 border-rounded rounded-[18px] text-black "
           />
           {errors.sectionName && (
-            <span className="ml-2 text-xs tracking-wide text-pink-200">
+            <span className="ml-2 text-xs tracking-wide text-white">
               Section name is required
             </span>
           )}

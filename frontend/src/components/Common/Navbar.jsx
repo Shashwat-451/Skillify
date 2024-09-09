@@ -9,6 +9,7 @@ import { apiConnector } from "../../services/apiConnector"
 import { categories } from "../../services/apis"
 import { ACCOUNT_TYPE } from "../../utils/constants"
 import ProfileDropdown from "../core/Auth/ProfileDropdown"
+import CustomDropdown from "./CustomDropdown"
 
 
 function Navbar() {
@@ -49,7 +50,7 @@ function Navbar() {
         location.pathname !== "/" ? " " : ""
       } transition-all duration-200`}
     >
-      <div style={{position:positionStyle,backgroundColor:"white",zIndex:"2",marginTop:"-20px",paddingTop:"30px",width:"100%",height:"90px"}} className="flex  items-center justify-between">
+      <div style={{position:positionStyle,backgroundColor:"white",zIndex:"200",marginTop:"-40px",paddingTop:"30px",width:"100%",height:"90px",marginBottom:"-40px"}} className="flex  items-center justify-between">
         
          <Link style={{fontWeight:"bold",fontSize:"25px",marginLeft:"20px"}} to="/"><HighlightText text={"Skillify"} /></Link>
 
@@ -115,6 +116,7 @@ function Navbar() {
             ))}
           </ul>
         </nav>
+       
         {/* Login / Signup / Dashboard */}
         <div className="hidden items-center gap-x-4 md:flex">
           {user && user?.accountType !== ACCOUNT_TYPE.INSTRUCTOR && (
@@ -143,14 +145,16 @@ function Navbar() {
               </button>
             </Link>
           )}
+           <CustomDropdown/>
           {token !== null && <ProfileDropdown />}
         </div>
-        
+       
         <button className="mr-4 md:hidden">
           <AiOutlineMenu fontSize={24} fill="#AFB2BF" />
         </button>
         
       </div>
+   
     </div>
   )
 }

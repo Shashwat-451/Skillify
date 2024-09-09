@@ -22,7 +22,6 @@ exports.signup = async (req, res) => {
       confirmPassword,
       accountType,
       contactNumber,
-      otp,
     } = req.body
     // Check if All Details are there or not
     if (
@@ -30,9 +29,7 @@ exports.signup = async (req, res) => {
       !lastName ||
       !email ||
       !password ||
-      !confirmPassword ||
-      !otp
-    ) {
+      !confirmPassword) {
       return res.status(403).send({
         success: false,
         message: "All Fields are required",
@@ -57,21 +54,21 @@ exports.signup = async (req, res) => {
     }
 
     // Find the most recent OTP for the email
-    const response = await OTP.find({ email }).sort({ createdAt: -1 }).limit(1)
-    console.log(response)
-    if (response.length === 0) {
-      // OTP not found for the email
-      return res.status(400).json({
-        success: false,
-        message: "The OTP is not valid",
-      })
-    } else if (otp !== response[0].otp) {
-      // Invalid OTP
-      return res.status(400).json({
-        success: false,
-        message: "The OTP is not valid",
-      })
-    }
+    // const response = await OTP.find({ email }).sort({ createdAt: -1 }).limit(1)
+    // console.log(response)
+    // if (response.length === 0) {
+    //   // OTP not found for the email
+    //   return res.status(400).json({
+    //     success: false,
+    //     message: "The OTP is not valid",
+    //   })
+    // } else if (otp !== response[0].otp) {
+    //   // Invalid OTP
+    //   return res.status(400).json({
+    //     success: false,
+    //     message: "The OTP is not valid",
+    //   })
+    // }
 
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10)

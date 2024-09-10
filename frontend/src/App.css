@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,7 +5,6 @@
 html,
 body {
   overflow-x: hidden;
-
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -256,12 +254,10 @@ details > summary::-webkit-details-marker {
   --card-color: #000;
 } */
 
-
-
 body.dark {
   --bg-color: #121212;
   --text-color: #ffffff;
-  --button-bg: #4169E1;  /* Dark button */
+  --button-bg: #4169e1; /* Dark button */
   --button-color: #ffffff;
   --card-bg: #1e1e1e;
   --card-color: #ffffff;
@@ -269,8 +265,8 @@ body.dark {
 
 body.green {
   --bg-color: #ffffff;
-   --text-color: #333333;
-  --button-bg: #388e3c;  /* Green button */
+  --text-color: #333333;
+  --button-bg: #388e3c; /* Green button */
   --button-color: #ffffff;
   --card-bg: #c8e6c9;
   --card-color: #2e7d32;
@@ -281,29 +277,27 @@ body.purple {
   --text-color: #333333; /* Dark Gray text */
   --button-bg: #7924b5; /* Dark Purple button */
   --button-color: #ffffff; /* White button text */
-  --card-bg: #E6E6FA; /* Lavender card background */
-  --card-color: #4B0082; /* Dark Purple card text */
-  }
-  
-  body.orange {
+  --card-bg: #e6e6fa; /* Lavender card background */
+  --card-color: #4b0082; /* Dark Purple card text */
+}
+
+body.orange {
   --bg-color: #ffffff; /* White background */
   --text-color: #333333; /* Dark Gray text */
-  --button-bg: #FF4500; /* Orange Red button */
+  --button-bg: #ff4500; /* Orange Red button */
   --button-color: #ffffff; /* White button text */
-  --card-bg: #FFD700; /* Gold card background */
-  --card-color: #FF6347; /* Tomato card text */
-  }
-  
-  body.blue {
+  --card-bg: #ffd700; /* Gold card background */
+  --card-color: #ff6347; /* Tomato card text */
+}
+
+body.blue {
   --bg-color: #ffffff; /* White background */
   --text-color: #333333; /* Dark Gray text */
-  --button-bg: #00BFFF; /* Deep Sky Blue button */
+  --button-bg: #00bfff; /* Deep Sky Blue button */
   --button-color: #ffffff; /* White button text */
-  --card-bg: #87CEFA; /* Light Sky Blue card background */
-  --card-color: #1E90FF; /* Dodger Blue card text */
-  }
-  
- 
+  --card-bg: #87cefa; /* Light Sky Blue card background */
+  --card-color: #1e90ff; /* Dodger Blue card text */
+}
 
 /* Apply variables */
 body {
@@ -323,25 +317,21 @@ body {
 
 .theme {
   background-color: var(--button-bg);
-  
 }
 
 .theme-bg {
   background-color: var(--bg-color);
-  
 }
 .theme-grey {
-  color:grey;
-  
+  color: grey;
 }
-.theme-text{
-  color:var(--button-bg) ;
+.theme-text {
+  color: var(--button-bg);
 }
 
 /* dropdown css */
 
 .dropbtn {
-
   color: white;
   padding: 8px;
   font-size: 16px;
@@ -351,24 +341,23 @@ body {
   align-items: center;
   justify-content: center;
   /* animation: rotate 2s linear infinite; */
-  }
-  @keyframes rotate {
-    from {
+}
+@keyframes rotate {
+  from {
     transform: rotate(0deg);
-    }
-    to {
+  }
+  to {
     transform: rotate(360deg);
-    }
-    }
-  /* .place::placeholder {
+  }
+}
+/* .place::placeholder {
     color: white;
   } */
-  .rot {
-    font-size: 25px; /* Adjust the size as needed */
-    /* animation: rotate 5s linear infinite; */
-    
-    }
-  /* .dropbtn2 {
+.rot {
+  font-size: 25px; /* Adjust the size as needed */
+  /* animation: rotate 5s linear infinite; */
+}
+/* .dropbtn2 {
 
     color: white;
     padding: 6px;
@@ -380,74 +369,185 @@ body {
     justify-content: center;
     }
    */
-  .dropdown {
+.dropdown {
   position: relative;
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-  .bg-gray{
-    background-color: rgb(214, 204, 204);
-  }
-  .dropdown-content {
+.bg-gray {
+  background-color: rgb(214, 204, 204);
+}
+.dropdown-content {
   display: none;
   position: absolute;
   right: 20px;
   min-width: 110px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border: 5px solid;
   border-color: var(--button-bg);
-  }
-  
-  .dropdown-content div {
+}
+.borderCol {
+  border: 5px solid;
+  border-color: var(--button-bg);
+}
+.dropdown-content div {
   color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   cursor: pointer;
-  }
-  
-  .dropdown-content div:hover {
-  background-color:white;
+}
+
+.dropdown-content div:hover {
+  background-color: white;
   color: black;
-  }
-  
-  .dropdown .dropdown-content {
+}
+
+.dropdown .dropdown-content {
   display: block;
-  }
+}
 
-  
+.coursesDiv {
+  position: fixed;
+  top: 180px;
+  right: 20px;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2.2);
+  color: black;
+  z-index: 20;
+  border-radius: 5px;
+}
+.search {
+  position: fixed;
+  top: 180px;
+  right: 20px;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2.2);
+  color: black;
+  z-index: 20;
+  border-radius: 5px;
+}
+.filterOpen {
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  top: 270px;
+  right: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-bg);
+  z-index: 20;
+  cursor: pointer;
+}
+.filterClosed {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  top: 250px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-bg);
+  cursor: pointer;
+  z-index: 20;
+}
 
-  .hov p:hover {
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-  
-    }
-   
- 
-    .allCoursesCards{
-     
-      position: relative;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
-      transition: box-shadow 0.3s ease;
-    
-    }
-  
-    .allCoursesCard:hover {
-    
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 2.5);
-  }
-  
-    .lowercontent{
-      position: absolute;
-      bottom: 0px; /* Position text from the bottom */
-            left: 0px; /* Position text from the left */
-            color: white; /* Text color */
-            font-size: 24px; /* Font size */
-            font-weight: bold; /* Font weight */
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            padding: 10px; /* Padding around text */
-            border-radius: 20px; /* Rounded corners */
-    }
+.SearchOpen {
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  top: 180px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-bg);
+  z-index: 12;
+}
+.SearchClosed {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  top: 180px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-bg);
+  z-index: 12;
+}
+
+.coursesDiv div:hover {
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: white;
+}
+.coursesDiv div {
+  padding: 10px;
+}
+.hov p:hover {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.allCoursesCards {
+  position: relative;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 0.3s ease;
+  width: 300px;
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+}
+.allCoursesCardImage image {
+  height: 300px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.allCoursesLower {
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  height: 150px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  /* align-self: center;
+      justify-content: center; */
+}
+.allCoursesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  width: 95%;
+  margin: 130px auto;
+}
+
+.allCoursesCard:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 2.5);
+}
+
+.lowercontent {
+  position: absolute;
+  bottom: 0px; /* Position text from the bottom */
+  left: 0px; /* Position text from the left */
+  color: white; /* Text color */
+  font-size: 24px; /* Font size */
+  font-weight: bold; /* Font weight */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px; /* Padding around text */
+  border-radius: 20px; /* Rounded corners */
+}
+.navbarurl {
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}

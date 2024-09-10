@@ -52,10 +52,10 @@ function Navbar() {
     >
       <div style={{position:positionStyle,backgroundColor:"white",zIndex:"200",marginTop:"-40px",paddingTop:"30px",width:"100%",height:"90px",marginBottom:"-40px"}} className="flex  items-center justify-between">
         
-         <Link style={{fontWeight:"bold",fontSize:"25px",marginLeft:"20px"}} to="/"><HighlightText text={"Skillify"} /></Link>
+         <Link style={{fontWeight:"bold",fontSize:"35px",marginLeft:"20px"}} to="/"><HighlightText text={"Skillify"} /></Link>
 
-        <nav className=" hidden md:block">
-          <ul className="flex gap-x-6">
+        <nav className=" navbarurl md:block">
+          <ul className="flex gap-x-6 ">
           
             {NavbarLinks.map((link, index) => (
               <li key={index}>
@@ -68,7 +68,7 @@ function Navbar() {
                           : "theme-grey font-bold"
                       }`}
                     >
-                      <p >{link.title}</p>
+                      <p className="p-2 m-2">{link.title}</p>
                       <BsChevronDown />
                       <div  className="theme hov invisible absolute left-[50%] top-[50%] z-[1000] flex w-[200px] translate-x-[-50%] translate-y-[3em] flex-col    rounded-lg   text-white opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px]">
                         <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded   "></div>
@@ -86,10 +86,10 @@ function Navbar() {
                                     .split(" ")
                                     .join("-")
                                     .toLowerCase()}`}
-                                  className="-transparent  hover: 0 rounded-lg py-4  pl-4"
+                                  className="-transparent  hover: 0 rounded-lg py-4  pl-4 "
                                   key={i}
                                 >
-                                  <p>{subLink.name}</p>
+                                  <p >{subLink.name}</p>
                                 </Link>
                               ))}
                           </>
@@ -101,11 +101,11 @@ function Navbar() {
                   </>
                 ) : (
                   <Link to={link?.path}>
-                    <p
+                    <p style={{borderRadius:"10px"}}
                       className={`${
                         matchRoute(link?.path)
-                          ? "theme-text font-bold"
-                          : "theme-grey font-bold"
+                          ? "theme text-white font-bold p-2 m-2"
+                          : "theme-grey font-bold p-2 m-2"
                       }`}
                     >
                       {link.title}

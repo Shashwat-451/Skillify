@@ -27,8 +27,8 @@ export default function ProfileDropdown() {
           alt={`profile-${user?.firstName}`}
           className="aspect-square w-[30px] rounded-full object-cover theme"
         /> */}
-        <CgProfile className="theme" style={{fontSize:"35px",color:"white",borderRadius:"50%"}}/>
-        <AiOutlineCaretDown className="text-sm " />
+        <CgProfile onClick={()=>setOpen(!open)} className="theme" style={{fontSize:"35px",color:"white",borderRadius:"50%"}}/>
+     
       </div>
       {open && (
         <div

@@ -121,7 +121,7 @@ const CustomDropdown = () => {
               <button className={`${header==="static"?"theme  text-white":"text-black bg-gray"}`} style={{padding:"8px",fontFamily:"georgia",fontWeight:"bold",fontSize:"13px",borderRadius:"10px"}} onClick={()=>handleHeaderChange("static")}>Static</button>
             </div>
           </div>
-        </div>
+      
       )}
     </div>
   )

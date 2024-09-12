@@ -10,8 +10,9 @@ const { convertSecondsToDuration } = require("../utils/secToDuration")
 exports.createCourse = async (req, res) => {
   try {
     // Get user ID from request object
-    const userId = "66d977e4fb11f2acafeebfe3"
-   
+    console.log("Request user",req.user)
+    const userId = req.user.id;
+
     // Get all required fields from request body
     let {
       courseName,

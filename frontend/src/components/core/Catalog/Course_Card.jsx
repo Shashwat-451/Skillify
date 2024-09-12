@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 // import { FaRegStar, FaStar } from "react-icons/fa"
 // import ReactStars from "react-rating-stars-component"
 import { Link } from "react-router-dom"
-
+import { FaRupeeSign } from "react-icons/fa";
 import GetAvgRating from "../../../utils/avgRating"
 import RatingStars from "../../Common/RatingStars"
 
@@ -20,7 +20,7 @@ function Course_Card({ course, Height }) {
   return (
     <>
       <Link to={`/courses/${course._id}`}>
-        <div className="bg-richblack-700 text-white rounded">
+        <div style={{fontFamily:"georgia"}} className="bg-richblack-700 text-white rounded">
           <div className="rounded-lg">
             <img
               src={course?.thumbnail}
@@ -28,8 +28,8 @@ function Course_Card({ course, Height }) {
               className={`${Height} w-full rounded-xl object-cover `}
             />
           </div>
-          <div className="flex flex-col gap-2 px-3 py-3">
-            <p className="text-xl  -5">{course?.courseName}</p>
+          <div style={{height:"160px"}} className="flex flex-col gap-2 px-3 py-3">
+            <p style={{height:"36px"}} className="text-xl">{course?.courseName}</p>
             <p className="text-sm  ">
               {course?.instructor?.firstName} {course?.instructor?.lastName}
             </p>
@@ -45,11 +45,15 @@ function Course_Card({ course, Height }) {
                 fullIcon={<FaStar />}
               /> */}
               <RatingStars Review_Count={avgReviewCount} />
-              <span className=" -400">
+              <span className="">
                 {course?.ratingAndReviews?.length} Ratings
               </span>
             </div>
-            <p className="text-xl  -5">Rs. {course?.price}</p>
+            <div className="flex">
+            <FaRupeeSign />
+            <p style={{marginTop:"-10px",marginLeft:"5px"}} className="text-xl">{course?.price}</p>
+            </div>
+            
           </div>
         </div>
       </Link>

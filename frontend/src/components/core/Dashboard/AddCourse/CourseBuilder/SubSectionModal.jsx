@@ -126,7 +126,7 @@ export default function SubSectionModal({
 
   return (
     <div className=" fixed inset-0 z-[1000] !mt-0 grid h-screen w-screen place-items-center overflow-auto  -white  -opacity-10 backdrop-blur-sm">
-      <div className=" theme text-white my-10 w-11/12 max-w-[700px] rounded-lg border border-richblack-400  ">
+      <div className=" bg-richblack-800 text-white my-10 w-11/12 max-w-[700px] rounded-lg border border-richblack-400  ">
         {/* Modal Header */}
         <div className=" flex items-center justify-between rounded-t-lg    p-5">
           <p className="text-xl font-semibold  -5">

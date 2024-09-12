@@ -158,7 +158,7 @@ export default function CourseInformationForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="theme text-white space-y-8 rounded-md border-[1px] border-richblack-700   p-6"
+      className="bg-richblack-800 text-white space-y-8 rounded-md border-[1px] border-richblack-700   p-6"
     >
       {/* Course Title */}
       <div className="flex flex-col space-y-2">
@@ -277,7 +277,7 @@ export default function CourseInformationForm() {
           id="courseBenefits"
           placeholder="Enter benefits of the course"
           {...register("courseBenefits", { required: true })}
-          className="form-style w-full p-2 border-rounded rounded-[18px] min-h-[130px] resize-x-nonetext-black "
+          className="form-style w-full p-2 border-rounded rounded-[18px] min-h-[130px] resize-x-none text-black "
           
         />
         {errors.courseBenefits && (

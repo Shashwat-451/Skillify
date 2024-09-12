@@ -369,24 +369,36 @@ body {
     justify-content: center;
     }
    */
-.dropdown {
+.dropdownOpen {
   position: relative;
   display: inline-block;
-  border-radius: 50%;
-  width: 40px;
+  left:275px;
+  width: 45px;
+  height: 45px;
+  top:260px;
+  z-index: 200;
+  background-color: var(--button-bg);
+  position: fixed;
+}
+.dropdownClosed {
+  position: relative;
+  display: inline-block;
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  top:260px
 }
 .bg-gray {
   background-color: rgb(214, 204, 204);
 }
 .dropdown-content {
-  display: none;
   position: absolute;
-  right: 20px;
+  left: 10px;
   min-width: 110px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2.2);
   z-index: 1;
-  border: 5px solid;
-  
+  top: 200px;
+  position: fixed;
 }
 .borderCol {
   border: 5px solid;
@@ -398,12 +410,13 @@ body {
   text-decoration: none;
   display: block;
   cursor: pointer;
+
 }
 
-.dropdown-content div:hover {
+/* .dropdown-content div:hover {
   background-color: white;
   color: black;
-}
+} */
 
 .dropdown .dropdown-content {
   display: block;
@@ -421,10 +434,10 @@ body {
 }
 .search {
   position: fixed;
-  top: 180px;
-  right: 20px;
+  top: 220px;
+  right: 50px;
   background-color: white;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
   color: black;
   z-index: 20;
   border-radius: 5px;
@@ -433,7 +446,7 @@ body {
   height: 60px;
   width: 60px;
   position: fixed;
-  top: 270px;
+  top: 300px;
   right: 170px;
   display: flex;
   align-items: center;
@@ -446,7 +459,7 @@ body {
   height: 50px;
   width: 50px;
   position: fixed;
-  top: 250px;
+  top: 300px;
   right: 0px;
   display: flex;
   align-items: center;
@@ -456,23 +469,12 @@ body {
   z-index: 20;
 }
 
-.SearchOpen {
-  height: 60px;
-  width: 60px;
-  position: fixed;
-  top: 180px;
-  right: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--button-bg);
-  z-index: 12;
-}
+
 .SearchClosed {
   height: 50px;
   width: 50px;
   position: fixed;
-  top: 180px;
+  top: 220px;
   right: 0px;
   display: flex;
   align-items: center;
@@ -480,19 +482,23 @@ body {
   background-color: var(--button-bg);
   z-index: 12;
 }
+.SearchClosed:hover{
+  cursor: pointer;
+}
 
 .coursesDiv div:hover {
   cursor: pointer;
-  background-color: var(--button-bg);
-  color: white;
+ 
+ 
 }
 .coursesDiv div {
   padding: 10px;
 }
+
 .hov p:hover {
-  background-color: white;
-  color: black;
-  border-radius: 10px;
+  background-color: var(--button-bg);
+  color: white;
+ 
 }
 
 .allCoursesCards {
@@ -550,4 +556,57 @@ body {
   background-color: white;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+}
+.pagination-container{
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+  margin: 0px auto;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: -49px;
+}
+.pagination{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 15px;
+ padding-top: 0px;
+ padding-bottom: 0px;
+ background-color: white;
+
+}
+.hover div:hover{
+ 
+  background-color: var(--button-bg);
+   color: white;
+}
+.active{
+  background-color: var(--button-bg);
+  color: white;
+}
+.pagination li{
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  margin: 20px;
+}
+.prev:hover{
+  background-color: var(--button-bg);
+  color: white;
+}
+.next:hover{
+  background-color: var(--button-bg);
+  color: white;
+}
+.linkk{
+  /* padding: 10px; */
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

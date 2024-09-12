@@ -44,7 +44,7 @@ export default function CourseReviewModal({ setReviewModal }) {
 
   return (
     <div className="fixed inset-0 z-[1000] !mt-0 grid h-screen w-screen place-items-center overflow-auto  -white  -opacity-10 backdrop-blur-sm">
-      <div className="my-10 w-11/12 max-w-[700px] rounded-lg border border-richblack-400  ">
+      <div className="bg-white  text-black my-10 w-11/12 max-w-[700px] rounded-lg border border-richblack-400  ">
         {/* Modal Header */}
         <div className="flex items-center justify-between rounded-t-lg    p-5">
           <p className="text-xl font-semibold  -5">Add Review</p>
@@ -85,6 +85,7 @@ export default function CourseReviewModal({ setReviewModal }) {
                 Add Your Experience <sup className="text-pink-200">*</sup>
               </label>
               <textarea
+              style={{boxShadow:"0px 8px 16px rgba(0, 0, 0, 0.5)",padding:"5px",borderRadius:"10px"}}
                 id="courseExperience"
                 placeholder="Add Your Experience"
                 {...register("courseExperience", { required: true })}

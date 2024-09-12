@@ -11,7 +11,7 @@ export default function MyProfile() {
 
   return (
     <>
-      <h1 className="mb-14 text-3xl font-medium  -5">
+      <h1 style={{fontSize:"48px",fontWeight:"bold",fontFamily:"georgia"}} className="mb-14 text-3xl font-medium  -5">
         My Profile
       </h1>
       <div className="theme text-white flex items-center justify-between rounded-md border-[1px] border-richblack-700   p-8 px-12">

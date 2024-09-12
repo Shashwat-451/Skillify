@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 // Image and Video Import
 import Banner from "../assets/Images/banner.mp4"
 // Component Imports
-import Footer from "../components/Common/Footer"
 import CTAButton from "../components/core/HomePage/Button"
 import CodeBlocks from "../components/core/HomePage/CodeBlocks"
 import ExploreMore from "../components/core/HomePage/ExploreMore"
@@ -12,23 +11,26 @@ import HighlightText from "../components/core/HomePage/HighlightText"
 
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
 import TimelineSection from "../components/core/HomePage/Timeline"
+import CustomDropdown from "../components/Common/CustomDropdown"
 
 function Home() {
   return (
     <div>
       {/* Section 1 */}
-     
+      <CustomDropdown/>
       <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 ">
         {/* Become a Instructor Button */}
         
-        <Link to={"/signup"}>
+    
           <div className="theme text-white group mx-auto mt-16 w-fit rounded-full   p-1 font-bold  -200 drop-shadow-[0_1.5px_rgba(255,255,255,0.25)] transition-all duration-200 hover:scale-95 hover:drop-shadow-none">
             <div className="theme text-white flex flex-row items-center gap-2 rounded-full px-10 py-[5px] transition-all duration-200 group-hover: ">
+            <Link to={"/signup"}>
               <p>Become an Instructor</p>
+              </Link>
               <FaArrowRight />
             </div>
           </div>
-        </Link>
+       
         
         {/* Heading */}
         <div className="text-center text-4xl font-semibold">

@@ -3,7 +3,7 @@ import ContactUsForm from "./ContactUsForm";
 
 const ContactForm = () => {
   return (
-    <div className=" text-white theme   rounded-xl p-7 lg:p-14 flex gap-3 flex-col">
+    <div style={{marginBottom:"50px"}} className=" text-white theme rounded-xl p-7 lg:p-14 flex gap-3 flex-col">
       <h1 className="text-4xl leading-10 font-semibold  -5">
         Got a Idea? We&apos;ve got the skills. Let&apos;s team up
       </h1>

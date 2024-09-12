@@ -5,7 +5,7 @@ export default function AddCourse() {
     <>
       <div className="flex w-full items-start gap-x-6">
         <div className="flex flex-1 flex-col">
-          <h1 className="mb-14 text-3xl font-medium  -5">
+          <h1 style={{fontFamily:"georgia",fontSize:"30px",fontWeight:"bold"}} className="mb-14 text-3xl font-medium  -5">
             Add Course
           </h1>
           <div className="flex-1">
@@ -13,7 +13,7 @@ export default function AddCourse() {
           </div>
         </div>
         {/* Course Upload Tips */}
-        <div className="sticky top-10 hidden max-w-[400px] flex-1 rounded-md border-[1px] border-richblack-700   p-6 xl:block">
+        <div className="sticky top-10 hidden max-w-[400px] flex-1 rounded-md border-[1px] bg-richblack-800 text-white  p-6 xl:block">
           <p className="mb-8 text-lg  -5">⚡ Course Upload Tips</p>
           <ul className="ml-5 list-item list-disc space-y-4 text-xs  -5">
             <li>Set the Course Price option or make it free.</li>

@@ -17,7 +17,7 @@ function ForgotPassword() {
   }
 
   return (
-    <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
+    <div style={{marginBottom:"30px"}} className="theme text-white grid min-h-[calc(100vh-3.5rem)] place-items-center">
       {loading ? (
         <div className="spinner"></div>
       ) : (
@@ -25,7 +25,7 @@ function ForgotPassword() {
           <h1 className="text-[1.875rem] font-semibold leading-[2.375rem]  -5">
             {!emailSent ? "Reset your password" : "Check email"}
           </h1>
-          <p className="my-4 text-[1.125rem] leading-[1.625rem]  -100">
+          <p style={{fontFamily:"georgia"}} className="my-4 text-[1.125rem] leading-[1.625rem]  -100">
             {!emailSent
               ? "Have no fear. We'll email you instructions to reset your password. If you dont have access to your email we can try account recovery"
               : `We have sent the reset email to ${email}`}
@@ -43,13 +43,13 @@ function ForgotPassword() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter email address"
-                  className="form-style w-full"
+                 className="form-style w-full p-2 border-rounded rounded-[18px] text-black "
                 />
               </label>
             )}
             <button
               type="submit"
-              className="mt-6 w-full rounded-[8px]   py-[12px] px-[12px] font-medium  -900"
+              className="mt-6 w-full rounded-[8px]   py-[10px] px-[10px] font-medium  bg-white text-black"
             >
               {!emailSent ? "Sumbit" : "Resend Email"}
             </button>

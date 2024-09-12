@@ -16,8 +16,10 @@ export default function Cart() {
 
   return (
     <>
-      <h1 className="mb-14 text-3xl font-medium  -5">Cart</h1>
-      <p className="border-b border-b-richblack-400 pb-2 font-semibold  -400">
+    <h1 style={{fontSize:"50px",fontFamily:"georgia",fontWeight:"bold"}} className="mb-4">Cart</h1>
+    <div className="theme p-4 text-white">
+      
+      <p className="border-b border-b-white-400 pb-2 font-semibold text-white">
         {totalItems} Courses in Cart
       </p>
       {total > 0 ? (
@@ -26,10 +28,12 @@ export default function Cart() {
           <RenderTotalAmount />
         </div>
       ) : (
-        <p className="mt-14 text-center text-3xl  -100">
+        <p className="mt-14 text-center text-3xl text-white">
           Your cart is empty
         </p>
       )}
+    </div>
     </>
+    
   )
 }

@@ -8,10 +8,11 @@ import LearningGrid from "../components/core/AboutPage/LearningGrid"
 import Quote from "../components/core/AboutPage/Quote"
 import StatsComponenet from "../components/core/AboutPage/Stats"
 import HighlightText from "../components/core/HomePage/HighlightText"
-
+import CustomDropdown from "../components/Common/CustomDropdown.jsx"
 const About = () => {
   return (
     <div>
+      <CustomDropdown/>
       <section className="  ">
         <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-center ">
           <header className="mx-auto py-20 text-4xl font-semibold lg:w-[70%]">
@@ -73,7 +74,7 @@ const About = () => {
               />
             </div>
           </div>
-          <div style={{marginTop:"-50px"}} className="flex flex-col items-center lg:gap-10 lg:flex-row justify-between theme text-white pl-5">
+          <div style={{marginTop:"-50px"}} className="flex flex-col items-center lg:gap-5 lg:flex-row justify-between theme text-white pl-5">
             <div className="my-24 flex lg:w-[40%] flex-col gap-10 ">
               <h1 className=" -gradient-to-b from-[#FF512F] to-[#F09819]  -clip-text text-4xl font-semibold   lg:w-[70%] ">
                 Our Vision

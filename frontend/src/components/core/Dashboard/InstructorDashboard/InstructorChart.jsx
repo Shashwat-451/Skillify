@@ -45,19 +45,21 @@ export default function InstructorChart({ courses }) {
   // Options for the chart
   const options = {
     maintainAspectRatio: false,
+    color:"white",
+    fontFamily:"georgia"
   }
 
   return (
-    <div className="flex flex-1 flex-col gap-y-4 rounded-md   p-6">
+    <div  className="flex flex-1 flex-col gap-y-4 rounded-md  bg-richblack-800 text-white p-6 ">
       <p className="text-lg font-bold  -5">Visualize</p>
-      <div className="space-x-4 font-semibold">
+      <div style={{border:"2px solid white",width:"29.7%"}} className="space-x-4 font-semibold">
         {/* Button to switch to the "students" chart */}
         <button
           onClick={() => setCurrChart("students")}
-          className={`rounded-sm p-1 px-3 transition-all duration-200 ${
+          className={`rounded-sm  px-3 transition-all duration-200 ${
             currChart === "students"
-              ? "   text-yellow-50"
-              : "text-yellow-400"
+              ? " bg-white text-black rounded-[25px]"
+              : "text-white"
           }`}
         >
           Students
@@ -65,10 +67,10 @@ export default function InstructorChart({ courses }) {
         {/* Button to switch to the "income" chart */}
         <button
           onClick={() => setCurrChart("income")}
-          className={`rounded-sm p-1 px-3 transition-all duration-200 ${
+          className={`rounded-sm  px-3 transition-all duration-200 ${
             currChart === "income"
-              ? "   text-yellow-50"
-              : "text-yellow-400"
+              ? "   bg-white text-black rounded-[25px]"
+              : "text-white"
           }`}
         >
           Income
@@ -76,7 +78,7 @@ export default function InstructorChart({ courses }) {
       </div>
       <div className="relative mx-auto aspect-square h-full w-full">
         {/* Render the Pie chart based on the selected chart */}
-        <Pie
+        <Pie style={{color:"white"}}
           data={currChart === "students" ? chartDataStudents : chartIncomeData}
           options={options}
         />

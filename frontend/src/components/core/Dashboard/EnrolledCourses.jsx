@@ -35,7 +35,7 @@ export default function EnrolledCourses() {
 
   return (
     <>
-      <div className="text-3xl  ">Enrolled Courses</div>
+      <div style={{fontSize:"48px",fontWeight:"bold",fontFamily:"georgia"}} className="text-3xl  ">Enrolled Courses</div>
       {!enrolledCourses ? (
         <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
           <div className="spinner"></div>
@@ -46,7 +46,7 @@ export default function EnrolledCourses() {
           {/* TODO: Modify this Empty State */}
         </p>
       ) : (
-        <div className="my-8  -5">
+        <div className="my-8 theme text-white -5">
           {/* Headings */}
           <div className="flex rounded-t-lg   00 ">
             <p className="w-[45%] px-5 py-3">Course Name</p>

@@ -20,20 +20,21 @@ export default function ProfileDropdown() {
   if (!user) return null
 
   return (
-    <button className="relative mr-2" onClick={() => setOpen(true)}>
+    <button className="relative " onClick={() => setOpen(true)}>
       <div className="flex items-center gap-x-1">
         {/* <img
           src={user?.image}
           alt={`profile-${user?.firstName}`}
           className="aspect-square w-[30px] rounded-full object-cover theme"
         /> */}
-        <CgProfile onClick={()=>setOpen(!open)} className="theme" style={{fontSize:"35px",color:"white",borderRadius:"50%"}}/>
+        <CgProfile onClick={()=>setOpen(!open)} className="theme" style={{fontSize:"35px",color:"white",borderRadius:"50%",marginRight:"30px"}}/>
      
       </div>
       {open && (
         <div
           onClick={(e) => e.stopPropagation()}
-          className="bg-white absolute top-[128%] right-3 z-[1000] divide-y-[1px] divide-richblack-700 overflow-hidden rounded-md border-[1px] border-richblack-700  "
+          style={{boxShadow:"0px 8px 16px 0px rgba(0, 0, 0, 2.2)"}}
+          className="hover absolute top-[128%] right-3 z-[1000] divide-y-[1px] divide-black overflow-hidden rounded-md  "
           ref={ref}
         >
           <Link to="/dashboard/my-profile" onClick={() => setOpen(false)}>

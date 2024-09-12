@@ -42,16 +42,16 @@ const CustomDropdown = () => {
   }
 
   return (
-    <div ref={dropdownRef}
-      style={{ width:"40x"}}
-      className="dropdown theme"
-    >
-      <button onClick={toggleDropdown} className="dropbtn">
+    <div ref={dropdownRef} style={{ width:"40x"}} >
+      <div className={`theme ${isOpen?"dropdownOpen":"dropdownClosed"}`}>
+      <button style={{zIndex:"2000"}} onClick={()=>toggleDropdown()} className="dropbtn">
         <IoMdSettings className="rot" />
       </button>
+      </div>
+      
       {isOpen && (
-        <div  className="side-container ml-4 ">
-          <div className="border rounded-lg dropdown-content flex w-[250px] p-3 bg-white">
+        <div  className="side-container dropdown-content ml-4 ">
+          <div className="border rounded-lg  flex w-[250px] p-3 bg-white">
           <p style={{color:"black",fontFamily:"georgia",fontWeight:"bold",fontSize:"12px"}} >THEME</p>
             <div style={{display: "flex", flexWrap: "wrap", gap: "5px" ,backgroundColor:"#F9F9FD"}}>
               <div
@@ -121,7 +121,7 @@ const CustomDropdown = () => {
               <button className={`${header==="static"?"theme  text-white":"text-black bg-gray"}`} style={{padding:"8px",fontFamily:"georgia",fontWeight:"bold",fontSize:"13px",borderRadius:"10px"}} onClick={()=>handleHeaderChange("static")}>Static</button>
             </div>
           </div>
-      
+        </div>
       )}
     </div>
   )

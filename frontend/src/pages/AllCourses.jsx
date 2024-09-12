@@ -1,16 +1,39 @@
 import React, { useEffect, useRef, useState } from "react"
-import axios from "axios"
+import axios, { all } from "axios"
 import { FaFilter, FaSearch } from "react-icons/fa"
-
+import CustomDropdown from "../components/Common/CustomDropdown.jsx"
 import CourseCard from "../components/core/Catalog/CourseCard.jsx"
 
 export default function AllCourses() {
+
+
   const [allCourses, setAllCourses] = useState([])
   const [filterByTag, setFilterByTag] = useState("All")
   const [search, setSearch] = useState("")
   const [filterOpen, isFilterOpen] = useState(false)
   const [searchOpen, isSearchOpen] = useState(false)
   const filterRef = useRef(null)
+  const searchRef=useRef(null)
+
+  //pagination variables
+  const [currentPage,setCurrentPage]=useState(1);
+  const recordsPerPage=8;
+  const lastIndex=currentPage*recordsPerPage;
+  const firstIndex=lastIndex-recordsPerPage;
+  
+  const displayCourses = allCourses.filter((course) => {
+    return course.courseName.toLowerCase().includes(search.toLowerCase())
+  })
+
+
+  const npage=Math.ceil(displayCourses.length/recordsPerPage);
+  const numbers=[...Array(npage+1).keys()].slice(1);
+
+
+
+
+
+  const records=displayCourses.slice(firstIndex,lastIndex);
   useEffect(() => {
     axios({
       url: "http://localhost:4000/api/v1/course/getAllCourses",
@@ -31,12 +54,26 @@ export default function AllCourses() {
         isFilterOpen(false)
       }
     }
+    
 
     document.addEventListener("mousedown", handleClickOutside)
     return () => {
       document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [filterRef])
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        isSearchOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [searchRef])
+
 
   const handleChange = (value) => {
     setFilterByTag(value)
@@ -51,17 +88,16 @@ export default function AllCourses() {
   const handleSearch = (event) => {
     setSearch(event.target.value)
   }
-  const displayCourses = allCourses.filter((course) => {
-    return course.courseName.toLowerCase().includes(search.toLowerCase())
-  })
+
   return (
     <>
-      <div style={{ position: "relative" }} className="filterByTag">
+    <CustomDropdown/>
+      <div style={{ position: "relative" ,marginTop:"-80px"}} className="filterByTag">
         <div
           onClick={() => handleFilterClick()}
           className={`${filterOpen ? "filterOpen" : "filterClosed"}`}
         >
-          <FaFilter style={{ fontSize: "15px", color: "white" }} />
+          <FaFilter style={{ fontSize: "20px", color: "white" }} />
         </div>
 
         {filterOpen && (
@@ -132,15 +168,16 @@ export default function AllCourses() {
 
       <div
         onClick={() => handleSearchClick()}
-        className={`${filterOpen ? "SearchOpen" : "SearchClosed"}`}
+        className="SearchClosed"
       >
-        <FaSearch style={{ fontSize: "15px", color: "white" }} />
+        <FaSearch style={{ fontSize: "20px", color: "white" }} />
       </div>
 
       {searchOpen && (
         <>
-          <div className="search">
+          <div ref={searchRef} className="search">
             <input
+            style={{height:"50px",outline:"none"}}
               className=" ml-3 w-[170px]  rounded-[18px] p-1"
               name="search"
               value={search}
@@ -153,7 +190,7 @@ export default function AllCourses() {
 
       <div className="allCoursesContainer">
         {filterByTag === "All" && Array.isArray(allCourses)
-          ? displayCourses.map((course) => (
+          ? records.map((course) => (
               <div>
                 <CourseCard
                   key={course.id}
@@ -162,7 +199,7 @@ export default function AllCourses() {
                 />
               </div>
             ))
-          : displayCourses.map(
+          : allCourses.map(
               (course) =>
                 course.category.name === filterByTag && (
                   <div>
@@ -175,6 +212,43 @@ export default function AllCourses() {
                 )
             )}
       </div>
+
+      <div className="pagination-container" >
+        <nav>
+          <ul className="pagination">
+             <l1 style={{padding:"10px",color:"black"}} className='page-item prev'>
+              <a href="#" className="page-link font-bold" onClick={()=>prePage()}>Prev</a>
+             </l1>
+             {
+              numbers.map((num,i)=>(
+                <li className={`page-item`} key={i}>
+                  <div className={`linkk ${currentPage===num?'theme text-white':''}`}>
+                  <a href="#"  onClick={()=>changeCPage(num)}>{num}</a>
+                  </div>
+                  
+                </li>
+              ))
+             }
+              <l1 style={{padding:"10px",color:"black"}} className='page-item next'>
+              <a href="#" className="page-link  font-bold" onClick={()=>nextPage()}>Next</a>
+             </l1>
+          </ul>
+        </nav>
+      </div>
     </>
   )
+  function nextPage(){
+    if(currentPage!==npage){
+      setCurrentPage(currentPage+1);
+     }
+  }
+  function prePage(){
+   if(currentPage!==1){
+    setCurrentPage(currentPage-1);
+   }
+  }
+  function changeCPage(id){
+   setCurrentPage(id);
+  }
+
 }

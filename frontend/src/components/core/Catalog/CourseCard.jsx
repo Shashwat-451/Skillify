@@ -30,12 +30,12 @@ function Course_Card({ course, Height }) {
             />
           </div>
           <div className="flex flex-col allCoursesLower">
-            <p style={{fontSize:"18px",fontWeight:"bold",color:"black",height:"100px"}} className="">{course?.courseName}</p>
+            <p style={{fontSize:"18px",fontWeight:"bold",height:"100px"}} className="">{course?.courseName}</p>
             <p style={{fontFamily:"sans-serif",fontWeight:"bold"}} className="text-sm ">
               {course?.instructor?.firstName} {course?.instructor?.lastName}
             </p>
             <div className="flex gap-2">
-              <span style={{color:"black",fontWeight:"bold"}} className="">{avgReviewCount || 0}</span>
+              <span style={{fontWeight:"bold"}} className="">{avgReviewCount || 0}</span>
 
               <RatingStars Review_Count={avgReviewCount} />
               <span style={{color:"grey"}} className="">
@@ -44,7 +44,7 @@ function Course_Card({ course, Height }) {
             </div>
             <div style={{display:"flex",marginTop:"8px"}}>
             <FaRupeeSign style={{}}/> 
-            <p style={{marginTop:"-5px",fontFamily:"sans-serif",fontSize:"18px",color:"black",fontWeight:"bold"}}> {course?.price}</p>
+            <p style={{marginTop:"-5px",fontFamily:"sans-serif",fontSize:"18px",fontWeight:"bold"}}> {course?.price}</p>
             </div>
             
           </div>

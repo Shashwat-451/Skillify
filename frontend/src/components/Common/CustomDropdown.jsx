@@ -43,8 +43,8 @@ const CustomDropdown = () => {
 
   return (
     <div ref={dropdownRef} style={{ width:"40x"}} >
-      <div className={`theme ${isOpen?"dropdownOpen":"dropdownClosed"}`}>
-      <button style={{zIndex:"2000"}} onClick={()=>toggleDropdown()} className="dropbtn">
+      <div style={{zIndex:"2000"}} onClick={()=>toggleDropdown()} className={`theme ${isOpen?"dropdownOpen":"dropdownClosed"}`}>
+      <button style={{zIndex:"2000"}}  className="dropbtn">
         <IoMdSettings className="rot" />
       </button>
       </div>

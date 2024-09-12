@@ -33,8 +33,8 @@ export default function ProfileDropdown() {
       {open && (
         <div
           onClick={(e) => e.stopPropagation()}
-          style={{boxShadow:"0px 8px 16px 0px rgba(0, 0, 0, 2.2)"}}
-          className="hover absolute top-[128%] right-3 z-[1000] divide-y-[1px] divide-black overflow-hidden rounded-md  "
+          style={{boxShadow:"0px 8px 16px 0px rgba(0, 0, 0, 2.2)",zIndex:"20"}}
+          className="hover absolute top-[128%] right-3 z-[1000] divide-y-[1px] divide-black overflow-hidden rounded-md  bg-white"
           ref={ref}
         >
           <Link to="/dashboard/my-profile" onClick={() => setOpen(false)}>

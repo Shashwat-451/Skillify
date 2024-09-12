@@ -173,7 +173,7 @@ function Navbar() {
         
         {
           
-          isOpen && <div ref={dropdownRef} style={{position:"relative",marginTop:"300px",marginRight:"-30px"}}>
+          isOpen && <div ref={dropdownRef} style={{position:"relative",marginTop:"300px",marginRight:"10px"}}>
           
           <nav className=" navbarurl md:hidden p-1">
           <ul className=" gap-x-6 ">
@@ -242,9 +242,9 @@ function Navbar() {
           </div>
         }
       </div>
-      <div style={{position:"relative"}}>
-       <button style={{zIndex:"100"}} onClick={()=>handleClick()} className="md:hidden">
-          <AiOutlineMenu style={{marginRight:"15px",padding:"0px"}} fontSize={24} fill="#AFB2BF" />
+      <div  style={{position:"relative",top:"1px",right:"0px",zIndex:"200"}}>
+       <button style={{zIndex:"200",position:"absolute",left:"200px",bottom:"0px"}} onClick={()=>handleClick()} className="md:hidden">
+          <AiOutlineMenu style={{marginRight:"4px",padding:"0px"}} fontSize={24} fill="#AFB2BF" />
         </button>
        </div>
     </div>

@@ -242,11 +242,11 @@ function Navbar() {
           </div>
         }
       </div>
-      <div  style={{position:"relative",top:"1px",right:"0px",zIndex:"200"}}>
+      {/* <div  style={{position:"relative",top:"1px",right:"0px",zIndex:"200"}}>
        <button style={{zIndex:"200",position:"absolute",left:"200px",bottom:"0px"}} onClick={()=>handleClick()} className="md:hidden">
           <AiOutlineMenu style={{marginRight:"4px",padding:"0px"}} fontSize={24} fill="#AFB2BF" />
         </button>
-       </div>
+       </div> */}
 
        <div  style={{position:"relative",bottom:"10px",right:"0px",zIndex:"200"}}>
        <button style={{zIndex:"200",position:"absolute",left:"140px",top:"0px"}} onClick={()=>handleClick()} className="md:hidden">

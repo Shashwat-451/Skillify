@@ -46,15 +46,15 @@ export default function CourseReviewModal({ setReviewModal }) {
     <div className="fixed inset-0 z-[1000] !mt-0 grid h-screen w-screen place-items-center overflow-auto  -white  -opacity-10 backdrop-blur-sm">
       <div className="bg-white  text-black my-10 w-11/12 max-w-[700px] rounded-lg border border-richblack-400  ">
         {/* Modal Header */}
-        <div className="flex items-center justify-between rounded-t-lg    p-5">
+        <div className="bg-black text-white flex items-center justify-between rounded-t-lg p-5">
           <p className="text-xl font-semibold  -5">Add Review</p>
           <button onClick={() => setReviewModal(false)}>
             <RxCross2 className="text-2xl  -5" />
           </button>
         </div>
         {/* Modal Body */}
-        <div className="p-6">
-          <div className="flex items-center justify-center gap-x-4">
+        <div className="theme text-white p-6">
+          <div className=" flex items-center justify-center gap-x-4">
             <img
               src={user?.image}
               alt={user?.firstName + "profile"}
@@ -89,7 +89,7 @@ export default function CourseReviewModal({ setReviewModal }) {
                 id="courseExperience"
                 placeholder="Add Your Experience"
                 {...register("courseExperience", { required: true })}
-                className="form-style resize-x-none min-h-[130px] w-full"
+                className="text-black form-style resize-x-none min-h-[130px] w-full"
               />
               {errors.courseExperience && (
                 <span className="ml-2 text-xs tracking-wide text-pink-200">
@@ -100,11 +100,11 @@ export default function CourseReviewModal({ setReviewModal }) {
             <div className="mt-6 flex w-11/12 justify-end gap-x-2">
               <button
                 onClick={() => setReviewModal(false)}
-                className={`flex cursor-pointer items-center gap-x-2 rounded-md   py-[8px] px-[20px] font-semibold  -900`}
+                className={`flex bg-white text-black cursor-pointer items-center gap-x-2 rounded-md   py-[8px] px-[20px] font-semibold  -900`}
               >
                 Cancel
               </button>
-              <IconBtn text="Save" />
+              <IconBtn className="bg-white text-black" text="Save" />
             </div>
           </form>
         </div>

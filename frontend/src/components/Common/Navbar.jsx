@@ -178,7 +178,7 @@ function Navbar() {
 
         {
 
-          isOpen && <div ref={dropdownRef} style={{ position: "relative", marginTop: "300px", marginRight: "10px" }}>
+          isOpen && <div ref={dropdownRef} style={{ position: "relative", marginTop: "330px", marginRight: "10px" }}>
 
             <nav className=" navbarurl md:hidden p-1">
               <ul className=" gap-x-6 ">
@@ -238,9 +238,53 @@ function Navbar() {
                     )}
                   </li>
                 ))}
-              </ul>
-            </nav>
 
+             <div className=" items-center gap-x-4 ">
+          {user && user?.accountType !== ACCOUNT_TYPE.INSTRUCTOR && (
+            <Link to="/dashboard/cart" className="relative">
+              <div style={{ height: "40px", width: "40px", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "50%" }} className="theme">
+                <AiOutlineShoppingCart className="text-white text-2xl" />
+              </div>
+
+              {totalItems > 0 && (
+                <span style={{ color: "white" }} className="theme absolute -top-2 -right-2 grid h-5 w-5 place-items-center overflow-hidden rounded-full   text-center text-xs font-bold text-yellow-100">
+                  {totalItems}
+                </span>
+              )}
+            </Link>
+          )}
+          <div className="block">
+          {token === null && (
+            <Link to="/login">
+              <button className=" text-white rounded-[6px] border theme  px-[8px]  py-[4px] ">
+                Log in
+              </button>
+            </Link>
+          )}
+
+          {token === null && (
+            <Link to="/signup">
+              
+              <button className="text-center text-white rounded-[6px] border theme  px-[8px]  py-[4px] mr-2 ">
+                Sign up
+              </button>
+            </Link>
+          )}
+
+          </div>
+          
+
+      
+        </div>
+
+
+              </ul>
+              <div style={{display:"flex",justifyContent:"center",alignItems:"center"}} className="flex">
+              {token !== null && <ProfileDropdown />}
+              </div>
+              
+            </nav>
+            
 
           </div>
         }

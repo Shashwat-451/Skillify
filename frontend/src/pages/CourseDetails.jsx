@@ -174,10 +174,10 @@ function CourseDetails() {
               <p className="space-x-3 pb-4 text-3xl font-semibold text-richblack-5">
                 Rs. {price}
               </p>
-              <button className="yellowButton" onClick={handleBuyCourse}>
+              <button className="bg-white text-black rounded-[18px] p-2" onClick={handleBuyCourse}>
                 Buy Now
               </button>
-              <button className="blackButton">Add to Cart</button>
+              <button className="blackButton bg-white text-black rounded-[18px] p-2">Add to Cart</button>
             </div>
           </div>
           {/* Courses Card */}

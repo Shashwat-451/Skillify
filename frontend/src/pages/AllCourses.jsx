@@ -36,7 +36,7 @@ export default function AllCourses() {
   const records=displayCourses.slice(firstIndex,lastIndex);
   useEffect(() => {
     axios({
-      url: "http://localhost:4000/api/v1/course/getAllCourses",
+      url: "https://skillify-2ep2.onrender.com/api/v1/course/getAllCourses",
       method: "GET",
     })
       .then((response) => {

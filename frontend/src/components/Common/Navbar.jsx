@@ -178,7 +178,7 @@ function Navbar() {
 
         {
 
-          isOpen && <div ref={dropdownRef} style={{ position: "relative", marginTop: "330px", marginRight: "10px" }}>
+          isOpen && <div ref={dropdownRef} style={{ position: "relative", marginTop: "370px", marginRight: "8px" }}>
 
             <nav className=" navbarurl md:hidden p-1">
               <ul className=" gap-x-6 ">
@@ -253,10 +253,10 @@ function Navbar() {
               )}
             </Link>
           )}
-          <div className="block">
+          <div style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
           {token === null && (
             <Link to="/login">
-              <button className=" text-white rounded-[6px] border theme  px-[8px]  py-[4px] ">
+              <button className="text-center rounded-[6px] border text-grey  px-[4px]  py-[2px] m-1 w-[90px]">
                 Log in
               </button>
             </Link>
@@ -265,7 +265,7 @@ function Navbar() {
           {token === null && (
             <Link to="/signup">
               
-              <button className="text-center text-white rounded-[6px] border theme  px-[8px]  py-[4px] mr-2 ">
+              <button className="text-center text-grey rounded-[6px] border  px-[4px]  py-[2px] m-1 w-[90px] ">
                 Sign up
               </button>
             </Link>

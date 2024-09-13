@@ -27,7 +27,7 @@ export default function ProfileDropdown() {
           alt={`profile-${user?.firstName}`}
           className="aspect-square w-[30px] rounded-full object-cover theme"
         /> */}
-        <CgProfile onClick={()=>setOpen(!open)} className="theme" style={{fontSize:"35px",color:"white",borderRadius:"50%",marginRight:"30px"}}/>
+        <CgProfile onClick={()=>setOpen(!open)} className="theme" style={{fontSize:"35px",color:"white",borderRadius:"50%",marginRight:"3px"}}/>
      
       </div>
       {open && (
